@@ -35,10 +35,6 @@ If this already contains a valid session (via `export BW_SESSION=$(bw unlock --r
 ##### BW_KEEP_SESSION (any/bool)
 If unset, the token in BW_SESSION will be invalidated on script exit. Note that any string attached to the variable will be counted as setting it.
 
-## Known issues
-
-The code checks if BW_SESSION is valid by calling `bw unlock --check`. This command is currently [bugged](https://github.com/bitwarden/clients/issues/2729) and always returns a negative response.
-
 ## Attribution
 
 To create this script, I used [ckabalan's export script](https://github.com/ckabalan/bitwarden-attachment-exporter/blob/master/bw-export.sh) (MIT licensed) as a baseline and added more informative output and stricter checking.
